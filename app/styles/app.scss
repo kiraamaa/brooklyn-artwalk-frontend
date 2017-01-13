@@ -1,2 +1,12 @@
 @import 'bootstrap';
 @import 'bootstrap/theme';
+
+.leaflet {
+  height: 400px;
+  width: 100%;
+}
+
+.popup-image {
+  height: 100px;
+  width: 150px;
+}

@@ -11,6 +11,8 @@ module.exports = function(defaults) {
     }
   });
 
+
+
   app.import('bower_components/bootstrap-sass/assets/javascripts/bootstrap.js');
 
   return app.toTree();

@@ -1,9 +1,15 @@
 @import 'bootstrap';
 @import 'bootstrap/theme';
 
+// body {
+//   background-color: ecru;
+// }
+
 .leaflet {
-  height: 400px;
+  height: 600px;
   width: 100%;
+  z-index: 1;
+  position: relative;
 }
 
 .popup-image {

@@ -11,6 +11,7 @@ Router.map(function () {
   this.route('change-password');
   this.route('users');
   this.route('leaflet');
+  this.route('museums');
 });
 
 export default Router;

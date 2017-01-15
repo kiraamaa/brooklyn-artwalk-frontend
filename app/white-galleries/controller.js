@@ -12,8 +12,8 @@ export default Ember.Controller.extend({
   //
   // L.marker([51.5, -0.09], {icon: greenIcon}).addTo(map);
 
-  lat: 40.670966,
-  lng: -73.940452,
+  lat: 40.706314,
+  lng: -73.921075,
   zoom: 12,
 
   galleries: Ember.A([

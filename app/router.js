@@ -10,8 +10,8 @@ Router.map(function () {
   this.route('sign-in');
   this.route('change-password');
   this.route('users');
-  this.route('leaflet');
-  this.route('museums');
+  this.route('white-galleries');
+  this.route('brooklyn-cultural');
 });
 
 export default Router;

@@ -3,11 +3,27 @@
     {{navbar-header}}
 
     <div class="collapse navbar-collapse" id="navigation">
-      {{!-- <ul class="nav navbar-nav">
+      <ul class="nav navbar-nav">
         {{#if isAuthenticated}}
         <li>{{#link-to "users"}}Users{{/link-to}}</li>
         {{/if}}
-      </ul> --}}
+      </ul>
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Artwalks<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">{{#link-to "brooklyn-cultural"}}Brooklyn Cultural Institutions{{/link-to}}</a></li>
+              <li><a href="#">{{#link-to "white-galleries"}}White Galleries{{/link-to}}</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">{{#link-to "artwalks"}}View all artwalks{{/link-to}}</a></li>
+            </ul>
+          </li>
+      </ul>
+      <ul class="nav navbar-nav">
+        {{#if isAuthenticated}}
+        <li>{{#link-to "favorites"}}Favorites{{/link-to}}</li>
+        {{/if}}
+      </ul>
       <ul class="nav navbar-nav navbar-right">
         {{#if isAuthenticated}}
         <li>{{#link-to "change-password"}}Change Password{{/link-to}}</li>
@@ -23,12 +39,12 @@
 
 <h1>Brooklyn Artwalks</h1>
 
-<nav class="navbar side-nav">
+{{!-- <nav class="navbar side-nav">
   <div class="container-fluid">
     {{#link-to "white-galleries"}}View White Galleries{{/link-to}}<br>
     {{#link-to "brooklyn-cultural"}}View Brooklyn Cultural Institutions{{/link-to}}
   </div>
-</nav>
+</nav> --}}
 
 
 {{#each flashMessages.queue as |flash|}}

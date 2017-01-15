@@ -1,15 +1,17 @@
 @import 'bootstrap';
 @import 'bootstrap/theme';
 
-// body {
-//   background-color: ecru;
-// }
+body {
+  background-image: url('/assets/images/metal.jpg');
+  color: white;
+}
 
 .leaflet {
   height: 450px;
+
+  position: relative;
   width: 100%;
   z-index: 1;
-  position: relative;
 }
 
 .popup-image {

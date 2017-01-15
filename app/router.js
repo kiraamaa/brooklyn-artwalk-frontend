@@ -12,6 +12,8 @@ Router.map(function () {
   this.route('users');
   this.route('white-galleries');
   this.route('brooklyn-cultural');
+  this.route('artwalks');
+  this.route('favorites');
 });
 
 export default Router;

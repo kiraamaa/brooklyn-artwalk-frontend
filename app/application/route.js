@@ -34,5 +34,8 @@ export default Ember.Route.extend({
 
       return false;
     },
+    toggleShowNav: function(){
+      this.controller.toggleProperty('showNav');
+    },
   },
 });

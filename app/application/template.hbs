@@ -1,1 +1,7 @@
-{{my-application signOut="signOut"}}
+{{#if showNav}}
+   {{my-application signOut="signOut"}}
+{{/if}}
+
+<h1>Brooklyn Artwalks</h1>
+
+<button {{action 'toggleShowNav'}}> show nav</button>

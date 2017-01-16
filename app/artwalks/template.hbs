@@ -1,18 +1,18 @@
 {{my-application signOut="signOut"}}
 <h2>Artwalks</h2>
 
-<ul>
+{{!-- <ul>
 {{#each model as |artwalk|}}
   <li>{{artwalk.title}}</li>
 {{/each}}
-</ul>
+</ul> --}}
 
 
-{{!-- {{#each model as |artwalk|}}
+{{#each model as |artwalk|}}
   {{artwalk-walk/card artwalk=artwalk
                     edit='editArtwalk'
                     delete='deleteArtwalk'}}
 {{/each}}
 
 {{#link-to 'artwalks/new'}}Create a new artwalk{{/link-to}}<br>
-{{#link-to 'application'}}Link to home{{/link-to}} --}}
+{{#link-to 'application'}}Link to home{{/link-to}}

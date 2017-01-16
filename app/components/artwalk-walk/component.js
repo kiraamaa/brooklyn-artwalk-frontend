@@ -12,9 +12,9 @@ export default Ember.Component.extend({
     toggleArtwalkDetail () {
       return this.toggleProperty('artwalkDetailHidden');
     },
-    togglePoint (point) {
-      console.log("you're inside togglePoint");
-      this.sendAction('togglePoint', point);
+    togglePointDone (point) {
+      console.log("you're inside togglePointDone");
+      this.sendAction('togglePointDone', point);
     },
     deletePoint (point) {
       this.sendAction('deletePoint', point);

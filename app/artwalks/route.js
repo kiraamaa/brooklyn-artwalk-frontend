@@ -5,12 +5,12 @@ export default Ember.Route.extend({
     return this.get('store').findAll('artwalk');
   },
   actions: {
-    editList (list) {
-      console.log("inside lists route, list is ", list);
-      this.transitionTo('list/edit', list);
+    editArtwalk (artwalk) {
+      console.log("inside artwalks route, artwalk is ", artwalk);
+      this.transitionTo('artwalk/edit', artwalk);
     },
-    deleteList (list) {
-      list.destroyRecord();
+    deleteArtwalk (artwalk) {
+      artwalk.destroyRecord();
     },
   },
 });

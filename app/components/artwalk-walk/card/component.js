@@ -1,11 +1,11 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  // isEmpty: Ember.computed('artwalk', function() {
-  //   let items = this.get('artwalk').hasMany('items');
-  //   console.log("items is", items);
-  //   return items.ids().length === 0;
-  // }),
+  isEmpty: Ember.computed('artwalk', function() {
+    let points = this.get('artwalk').hasMany('points');
+    console.log("points is", points);
+    return points.ids().length === 0;
+  }),
   actions: {
     edit () {
       console.log("inside editWalk in artwalk-walk/card component");
@@ -13,6 +13,8 @@ export default Ember.Component.extend({
       this.sendAction('edit', this.get('artwalk'));
     },
     delete () {
+      console.log("testtttttttt",this.get('artwalk') );
+
       this.sendAction('delete', this.get('artwalk'));
     },
   },

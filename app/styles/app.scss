@@ -3,7 +3,7 @@
 
 body {
   background-image: url('/assets/images/metal.jpg');
-  color: white;
+  color: #fff;
 }
 
 .landing-div {
@@ -16,6 +16,10 @@ body {
 
 .welcome-description {
   margin-top: 0;
+}
+
+.landing-link {
+  color: #fff;
 }
 
 .leaflet {

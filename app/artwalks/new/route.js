@@ -7,8 +7,10 @@ export default Ember.Route.extend({
   actions: {
     createArtwalk (artwalk) {
       console.log("inside artwalks/new route createArtwalk");
+      console.log("this is artwalk", artwalk);
       artwalk.save();
       this.transitionTo('artwalks');
+      // artwalk.rollbackAttributes();
     },
     cancelCreateArtwalk (artwalk) {
       console.log("inside artwalks/new route cancel");

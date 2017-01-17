@@ -1,7 +1,9 @@
 {{my-application signOut="signOut"}}
 
-<div class="content">
-<h2>Artwalks</h2>
+<div class="col-md-4 pull-right sidebar">
+<h2>
+  Artwalks
+</h2>
 
 {{!-- <ul>
 {{#each model as |artwalk|}}
@@ -13,8 +15,8 @@
     {{artwalk-walk/card artwalk=artwalk
                       edit='editArtwalk'
                       delete='deleteArtwalk'}}
-  {{/each}}
+  {{/each}}<br>
 
-  {{#link-to 'artwalks/new' class="dynamic-a"}}Create a new artwalk{{/link-to}}<br>
-  {{#link-to 'application' class="dynamic-a"}}Link to home{{/link-to}}
+  <button class='btn btn-md'>{{#link-to 'artwalks/new' class="dynamic-a"}}Create a new artwalk{{/link-to}}</button>
+  {{!-- {{#link-to 'application' class="dynamic-a"}}Link to home{{/link-to}} --}}
 </div>

@@ -1,10 +1,10 @@
 <h4>
-{{#link-to 'favorite' favorite class="dynamic-a"}}
+{{!-- {{#link-to 'favorite' favorite class="dynamic-a"}} --}}
   {{favorite.title}}
-{{/link-to}}
+{{!-- {{/link-to}} --}}
 
 {{!-- {{#if isEmpty}} --}}
-<button class='btn btn-xs btn-danger' {{action 'delete'}}>Delete</button>
+<button class='btn btn-xs' {{action 'delete'}}>Delete</button>
 {{!-- {{/if}} --}}
 
 <button class='btn btn-xs' {{action 'edit'}}>Edit</button>

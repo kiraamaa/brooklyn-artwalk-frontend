@@ -1,11 +1,11 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  isEmpty: Ember.computed('artwalk', function() {
-    let points = this.get('artwalk').hasMany('points');
-    console.log("points is", points);
-    return points.ids().length === 0;
-  }),
+  // isEmpty: Ember.computed('artwalk', function() {
+  //   let points = this.get('artwalk').hasMany('points');
+  //   console.log("points is", points);
+  //   return points.ids().length === 0;
+  // }),
   actions: {
     edit () {
       console.log("inside editWalk in artwalk-walk/card component");

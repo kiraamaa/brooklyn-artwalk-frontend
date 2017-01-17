@@ -10,6 +10,7 @@ export default Ember.Route.extend({
       console.log("you got to the favorite/edit route. your favorite is ", favorite);
       favorite.save();
       this.transitionTo('favorites');
+      favorite.rollbackAttributes();
     },
     cancel (favorite) {
       favorite.rollbackAttributes();

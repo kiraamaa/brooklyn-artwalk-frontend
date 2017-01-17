@@ -19,6 +19,7 @@ export default Ember.Route.extend({
       let walk = this.get('store').createRecord('walk', newWalk);
       console.log("inside route createWalk, walk is ", walk);
       walk.save();
+      walk.rollbackAttributes();
     },
   },
 });

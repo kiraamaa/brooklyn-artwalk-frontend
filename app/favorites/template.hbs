@@ -1,6 +1,8 @@
 {{my-application signOut="signOut"}}
-<div class="content">
-  <h2 class="neon">Favorites</h2>
+<div class="col-md-4 pull-right sidebar">
+  <h2 class="neon">
+    Favorites <br>
+  </h2>
 
   {{!-- <ul>
   {{#each model as |favorite|}}
@@ -13,8 +15,9 @@
                       edit='editFavorite'
                       delete='deleteFavorite'}}
   {{/each}}
+  <br>
 
-  {{#link-to 'favorites/new' class="dynamic-a"}}Create a new favorite{{/link-to}}<br>
-  {{#link-to 'application' class="dynamic-a"}}Link to home{{/link-to}}
+  <button class='btn btn-md'>  {{#link-to 'favorites/new' class="dynamic-a"}}Create a new favorite{{/link-to}}</button>
+  {{!-- {{#link-to 'application' class="dynamic-a"}}Link to home{{/link-to}} --}}
 
 </div>

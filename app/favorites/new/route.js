@@ -8,6 +8,7 @@ export default Ember.Route.extend({
     createFavorite (favorite) {
       console.log("inside favorites/new route createFavorite");
       favorite.save();
+      favorite.rollbackAttributes();
       this.transitionTo('favorites');
     },
     cancelCreateFavorite (favorite) {

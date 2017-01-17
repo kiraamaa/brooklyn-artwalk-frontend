@@ -1,17 +1,22 @@
 @import 'bootstrap';
 @import 'bootstrap/theme';
 
+
 body {
-  background-image: url('/assets/images/metal.jpg');
+  background-image: url('/assets/images/bkl.jpg');
+  // background-position: center;
   color: #fff;
+  font-family: 'Quattrocento', serif;
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
-.landing-div {
-  height: 600px;
-}
+// .landing-div {
+//   height: 200px;
+// }
 
 .welcome-text {
   padding: 10% 0;
+  height: 800px;
 }
 
 .welcome-description {
@@ -23,8 +28,7 @@ body {
 }
 
 .leaflet {
-  height: 450px;
-
+  height: 600px;
   position: relative;
   width: 100%;
   z-index: 1;
@@ -34,3 +38,57 @@ body {
   height: 100px;
   width: 150px;
 }
+
+.navbar-collapse {
+  background: white;
+  border-top: 0;
+  box-shadow: none;
+  margin-left: -15px;
+  margin-right: -15px;
+  padding-right: 30px;
+}
+
+.gallery {
+  // padding-top: 40px;
+  padding-left: 0;
+  padding-right: 0;
+  margin-top: -1px;
+}
+
+a {
+  color: black;
+}
+
+.dynamic-a {
+  color: white;
+}
+
+#gallery-list {
+  // background-color: grey;
+  padding-left: 15px;
+  height: 600px;
+  background-color:rgba(0, 0, 0, 0.5);
+}
+
+.container-fluid {
+  padding: 0;
+}
+
+.icon-bar {
+  background: black;
+}
+
+.navbar-header {
+  background: white;
+  margin-bottom: 0;
+}
+
+.content {
+  padding-left: 20px;
+}
+
+// @media (min-width: 700px) {
+//   .leaflet {
+//
+//   }
+// }

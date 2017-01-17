@@ -24,7 +24,7 @@ export default Ember.Component.extend({
       // this.sendAction('createPoint', this.get('newPoint'));
       console.log("inside createPoint, this.get(newPoint) is ", this.get('newPoint'));
       let data = this.get('newPoint');
-      data.point = this.get('point');
+      data.artwalk = this.get('artwalk');
       this.sendAction('createPoint', data);
     },
   },

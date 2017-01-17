@@ -1,8 +1,10 @@
 {{my-application signOut="signOut"}}
-<h2>Users</h2>
+<div class="content">
+  <h2>Users</h2>
 
-<ul>
-{{#each model as |user|}}
-  <li>{{user.email}}</li>
-{{/each}}
-</ul>
+  <ul>
+  {{#each model as |user|}}
+    <li>{{user.email}}</li>
+  {{/each}}
+  </ul>
+</div>

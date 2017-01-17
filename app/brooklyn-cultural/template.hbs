@@ -1,5 +1,5 @@
 {{my-application signOut="signOut"}}
-<div class="col-md-8">
+<div class="col-md-8 gallery">
 
   {{#leaflet-map lat=lat lng=lng zoom=zoom class="leaflet"}}
 
@@ -10,7 +10,7 @@
     {{/if}}
 
     {{#each galleries as |g|}}
-      {{#marker-layer lat=g.lat lng=g.lng draggable=false onDragend=(action "updateLocation" g)}}
+      {{#marker-layer lat=g.lat lng=g.lng draggable=false onDragend=(action "updateLocation" g) class="markers"}}
         {{#popup-layer popupOpen=(readonly g.isOpen)}}
           <h3>{{g.name}}</h3>
           <img src={{g.image}} class="popup-image center-block"><br>
@@ -29,8 +29,8 @@
   <p><label>{{input type="checkbox" checked=nightMode}} Night mode</label></p>
   </div>
 
-<div class="col-md-4">
-  <h3>Brooklyn Cultural Institutions</h3>
+<div class="col-md-4 gallery" id="gallery-list">
+  <h3>Brooklyn Culture</h3>
   <ul>
     {{#each galleries as |g|}}
       <li>

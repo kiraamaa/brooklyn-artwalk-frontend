@@ -1,8 +1,20 @@
 {{my-application signOut="signOut"}}
-<h2>Favorites</h2>
+<div class="content">
+  <h2 class="neon">Favorites</h2>
 
-<ul>
-{{#each model as |favorite|}}
-  <li>{{favorite.artwalkId}}</li>
-{{/each}}
-</ul>
+  {{!-- <ul>
+  {{#each model as |favorite|}}
+    <li>{{favorite.id}}</li>
+  {{/each}}
+  </ul> --}}
+
+  {{#each model as |favorite|}}
+    {{artwalk-favorite/card favorite=favorite
+                      edit='editFavorite'
+                      delete='deleteFavorite'}}
+  {{/each}}
+
+  {{#link-to 'favorites/new' class="dynamic-a"}}Create a new favorite{{/link-to}}<br>
+  {{#link-to 'application' class="dynamic-a"}}Link to home{{/link-to}}
+
+</div>

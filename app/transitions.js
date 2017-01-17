@@ -1,4 +1,4 @@
-import { animate, stop, Promise } from "liquid-fire";
+// import { animate, stop, Promise } from "liquid-fire";
 
 export default function(){
   this.transition(

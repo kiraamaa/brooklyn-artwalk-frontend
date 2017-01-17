@@ -1,11 +1,11 @@
 <h4>
-{{#link-to 'artwalk' artwalk}}
+{{#link-to 'artwalk' artwalk class="dynamic-a"}}
   {{artwalk.title}}
 {{/link-to}}
 
 
 {{#if isEmpty}}
-<button class='btn btn-xs btn-danger' {{action 'delete'}}>Delete</button>
+<button class='btn btn-xs' {{action 'delete'}}>Delete</button>
 {{/if}}
 
 

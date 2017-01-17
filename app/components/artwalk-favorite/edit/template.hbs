@@ -1,0 +1,6 @@
+<form {{action 'save' on='submit'}}>
+  {{input placeholder='Favorite Title'
+          value=favorite.title}}
+  <button class='btn btn-xs' type='submit'>Save</button>
+  <button class='btn btn-xs' {{action 'cancel'}}>Cancel</button>
+</form>

@@ -1,6 +1,8 @@
-import DS from 'ember-data';
+// import DS from 'ember-data';
+import ApplicationAdapter from 'ga-wdi-boston.ember-auth/application/adapter';
 
-export default DS.JSONAPIAdapter.extend({
+// export default DS.JSONAPIAdapter.extend({
+export default ApplicationAdapter.extend({
   createRecord (store, type, record) {
     let api = this.get('host');
     let serialized = this.serialize(record, { includeId: true});

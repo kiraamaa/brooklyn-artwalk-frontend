@@ -10,6 +10,7 @@ export default Ember.Route.extend({
       console.log("you got to the artwalk/edit route. your artwalk is ", artwalk);
       artwalk.save();
       this.transitionTo('artwalks');
+      artwalk.rollbackAttributes();
     },
     cancel (artwalk) {
       artwalk.rollbackAttributes();

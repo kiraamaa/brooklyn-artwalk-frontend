@@ -21,5 +21,14 @@ export default Ember.Route.extend({
       walk.save();
       walk.rollbackAttributes();
     },
+    willTransition () {
+     let store = this.get('store');
+     store.peekAll('favorite').forEach(function (favorite) {
+       if (favorite.get('hasDirtyAttributes')) {
+         favorite.rollbackAttributes();
+       }
+     });
+     return true;
+   },
   },
 });

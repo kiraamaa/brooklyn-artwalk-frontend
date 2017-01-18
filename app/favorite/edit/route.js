@@ -16,5 +16,14 @@ export default Ember.Route.extend({
       favorite.rollbackAttributes();
       this.transitionTo('favorite');
     },
+    willTransition () {
+     let store = this.get('store');
+     store.peekAll('favorite').forEach(function (favorite) {
+       if (favorite.get('hasDirtyAttributes')) {
+         favorite.rollbackAttributes();
+       }
+     });
+     return true;
+   },
   },
 });

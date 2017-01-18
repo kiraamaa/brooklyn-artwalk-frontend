@@ -19,7 +19,7 @@ export default Ember.Route.extend({
     willTransition () {
      let store = this.get('store');
      store.peekAll('artwalk').forEach(function (artwalk) {
-       if (artwalk.get('isNew') && artwalk.get('hasDirtyAttributes')) {
+       if (artwalk.get('hasDirtyAttributes')) {
          artwalk.rollbackAttributes();
        }
      });

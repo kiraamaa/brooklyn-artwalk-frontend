@@ -16,5 +16,14 @@ export default Ember.Route.extend({
       artwalk.rollbackAttributes();
       this.transitionTo('artwalks');
     },
+    willTransition () {
+     let store = this.get('store');
+     store.peekAll('artwalk').forEach(function (artwalk) {
+       if (artwalk.get('isNew') && artwalk.get('hasDirtyAttributes')) {
+         artwalk.rollbackAttributes();
+       }
+     });
+     return true;
+   },
   },
 });

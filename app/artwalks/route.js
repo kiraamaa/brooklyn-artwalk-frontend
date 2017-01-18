@@ -12,5 +12,14 @@ export default Ember.Route.extend({
     deleteArtwalk (artwalk) {
       artwalk.destroyRecord();
     },
+    willTransition () {
+     let store = this.get('store');
+     store.peekAll('artwalk').forEach(function (artwalk) {
+       if (artwalk.get('isNew') && artwalk.get('hasDirtyAttributes')) {
+         artwalk.rollbackAttributes();
+       }
+     });
+     return true;
+   },
   },
 });

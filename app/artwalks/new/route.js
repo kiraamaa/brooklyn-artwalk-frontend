@@ -10,12 +10,21 @@ export default Ember.Route.extend({
       console.log("this is artwalk", artwalk);
       artwalk.save();
       this.transitionTo('artwalks');
-      // artwalk.rollbackAttributes();
+      artwalk.rollbackAttributes();
     },
     cancelCreateArtwalk (artwalk) {
       console.log("inside artwalks/new route cancel");
       artwalk.rollbackAttributes();
       this.transitionTo('artwalks');
     },
+    willTransition () {
+     let store = this.get('store');
+     store.peekAll('artwalk').forEach(function (artwalk) {
+       if (artwalk.get('isNew') && artwalk.get('hasDirtyAttributes')) {
+         artwalk.rollbackAttributes();
+       }
+     });
+     return true;
+   },
   }
 });

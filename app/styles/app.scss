@@ -10,9 +10,11 @@ body {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-// .landing-div {
-//   height: 200px;
-// }
+.welcome-div {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding-top: 10px;
+  padding-bottom: 30px;
+}
 
 .welcome-text {
   padding: 10% 0;
@@ -119,4 +121,11 @@ h2 {
 
 .change-pw-button {
   margin-left: 0px;
+}
+
+.leaflet-test {
+  height: 600px;
+  position: relative;
+  width: 100%;
+  z-index: 1;
 }

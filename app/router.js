@@ -38,7 +38,6 @@ Router.map(function () {
 
   this.route('favorite', { path: 'favorites/:favorite_id' });
   this.route('favorite/edit', { path: 'favorites/:favorite_id/edit' });
-
 });
 
 export default Router;
